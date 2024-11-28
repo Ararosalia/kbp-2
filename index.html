@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<style> 
+    * {  
+        border: 2px solid #fbfcfc;  
+        padding: 15px;  
+        margin: 15px;  
+    } 
+    html {  
+      margin: 0; 
+      padding: 0; 
+    } 
+    body {  
+      max-width: 600px; 
+      margin: 30px auto; 
+      font-family: sans-serif; 
+      color: #0f0f0f; 
+    } 
+    #container1 {  
+      background-color: #c9e6f8;  
+      padding: 20px;  
+      margin: 20px;  
+    }
+    #container2 {  
+      background-color: #c9e6f8;  
+      padding: 20px;  
+      margin: 20px;  
+    }
+</style> 
+</head> 
+<body> 
+    <h1 id="h1"> Judul </h1> 
+    <div id="container1"> 
+        <section id="a"> 
+        <p> Paragraf 1 </p> 
+        <p> Paragraf 2 </p> 
+        <a href="#">Link</a> 
+        </section> 
+    </div> 
+    <div id="container2"> 
+        <ul> 
+            <li class="list">List 1</li> 
+            <li class="list">List 2</li> 
+            <li class="list">List 3</li> 
+        </ul> 
+    </div> 
+    <script>
+        // Mengubah href tag <a>
+        document.querySelector('a').href = "https://www.google.com";
+
+        // Mengubah text, style, dan size menggunakan loop
+        document.querySelectorAll('.list').forEach((item, index) => {
+            item.textContent = `List Baru ${index + 1}`; // Mengubah teks
+            item.style.backgroundColor = index % 2 === 0 ? 'pink' : 'lavender'; // Background warna bergantian
+            item.style.fontSize = `${16 + index * 2}px`; // Ukuran font bertambah
+        });
+    </script>
+</body>
+</html>
